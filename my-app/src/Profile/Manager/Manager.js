@@ -22,7 +22,7 @@ const Manager = () => {
         for (const key in responseData) {
           if (
             employeeId === responseData[key].managerId &&
-            !responseData[key].status
+            responseData[key].status === "pending"
           ) {
             loadedData.push({
               id: key,
